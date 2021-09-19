@@ -29,7 +29,6 @@
 
 #>
 
-#Requires -Module ADFS
 
 <# 
 
@@ -37,6 +36,7 @@
  Query WAP / ADFS Proxy Servers for ADFS 
 
  #> 
+ Import-Module ADFS
 $exportlocation= "c:\script"
 if (Test-Path "$exportlocation\2012WAPList.txt") {Remove-Item "2012WAPList.txt"}
 
