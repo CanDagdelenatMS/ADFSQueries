@@ -1,4 +1,42 @@
-﻿
+﻿<#PSScriptInfo
+
+.VERSION 1.0
+
+.GUID 55383ee5-3a82-4206-9e95-8b8ca2b5dafd
+
+.AUTHOR Can Dagdelen
+
+.COMPANYNAME 
+
+.COPYRIGHT 
+
+.TAGS 
+
+.LICENSEURI 
+
+.PROJECTURI 
+
+.ICONURI 
+
+.EXTERNALMODULEDEPENDENCIES 
+
+.REQUIREDSCRIPTS 
+
+.EXTERNALSCRIPTDEPENDENCIES 
+
+.RELEASENOTES
+
+
+#>
+
+#Requires -Module ADFS
+
+<# 
+
+.DESCRIPTION 
+ Query WAP / ADFS Proxy Servers for ADFS 
+
+ #> 
 $exportlocation= "c:\script"
 if (Test-Path "$exportlocation\2012WAPList.txt") {Remove-Item "2012WAPList.txt"}
 
@@ -9,7 +47,7 @@ catch {$fblevel=2} #Get-AdfsFarmInformation not available in Server 2012 R2 ADFS
 
     switch ($fblevel) {
     2 
-        {$adfsdbname= 'AdfsConfiguration' #Server 2012 Farm Behavior Level
+        {$adfsdbname= 'AdfsConfiguration' #Server 2012R2 Farm Behavior Level
         $dbquery = "SELECT ServiceSettingsData FROM [$adfsdbname].[IdentityServerPolicy].[ServiceSettings]"}
     3 
         {$adfsdbname= 'AdfsConfigurationv3' #Server 2016 Farm Behavior Level
