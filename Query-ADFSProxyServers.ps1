@@ -79,6 +79,7 @@ catch {$fblevel=2} #Get-AdfsFarmInformation not available in Server 2012 R2 ADFS
 #endregion
 
 if ($SQLServerName -eq "WID") {$SQLServerName= "server=\\.\pipe\MICROSOFT##WID\tsql\query"}
+else {$SQLServerName = "Server=" + "$SQLServerName"}
 
 #region Prepare SQL Connection String
 $sqlConn = "$SQLServerName;database=$adfsdbname;trusted_connection=true;"
