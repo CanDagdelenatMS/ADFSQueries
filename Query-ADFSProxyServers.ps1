@@ -122,6 +122,6 @@ else {
 #region Output
 Write-Host -ForegroundColor Yellow "The Farm Behavior Level is $fblevel. The ADFS Servers are running on Windows $textoutput."
 
-$result
+Write-Host "ADFS Proxy information: $result"
 if ($ExportPath) {$result | Export-Csv -Path "$ExportPath" }
 #endregion
