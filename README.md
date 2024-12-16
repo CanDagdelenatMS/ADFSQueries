@@ -1,3 +1,4 @@
+Hello ADFS admins,
 For cases ADFS environment is not documented, and/or admins having limited knowledge on ADFS (e.g. Primary ADFS admin leaves the company).
 
 Whatever the reason, you maybe required to query registered WAPs or find out whether ADFS uses WID or SQL.
@@ -10,4 +11,6 @@ Whatever the reason, you maybe required to query registered WAPs or find out whe
     If you know the SQL Server name, can use -SQLServerName parameter.
 2. Get-ADFSSQLInfo
     Is a real simple script to query WMI and find out the name of the SQL Server or if ADFS uses WID. Hence it either returns 'WID' or the SQL server name.
+
+    
   
